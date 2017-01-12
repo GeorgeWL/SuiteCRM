@@ -155,9 +155,9 @@ foreach ($recordIds as $recordId) {
         $pdf_history->WriteHTML($printable);
         $pdf_history->Output($sugar_config['upload_dir'] . 'nfile.pdf', 'F');
 
-        $pdf->AddPage();
-        $pdf->SetAutoFont();
         $pdf->SetHTMLHeader($header);
+        $pdf->AddPage();
+        $pdf->SetAutoFont();       
         $pdf->SetHTMLFooter($footer);
         $pdf->WriteHTML($printable);
 
